@@ -20,8 +20,8 @@ var RubyEngineNK = Class(Object, {
             put: function(arg1, arg2){
                 RubyEngine.put(arg1, arg2);
             },
-            eval: function(arg1, arg2){
-                RubyEngine.eval(arg1, arg2);
+            eval: function(arg1){
+                RubyEngine.eval(arg1);
             },
             getEngineName: function(){
                 return "RubyEngineNK & " + RubyManager.getEngineName();

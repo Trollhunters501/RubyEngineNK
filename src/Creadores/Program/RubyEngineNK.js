@@ -8,8 +8,8 @@ script.registerScript({
 });
 var RubyEngineNK = Class(Object, {
     build: function(){
-        let libs = new NnClassLoader({ jars: [server.getPluginPath() + 'RubyLib_v9.4.6.0.jar'] });
-        let RubyFactor = libs.type("org.jruby.embed.jsr223.JRubyEngineFactory");
+        let libs = manager.getPlugin("RubyLib").getClass().getClassLoader();
+        let RubyFactor = libs.findClass("org.jruby.embed.jsr223.JRubyEngineFactory");
         let RubyManager = new RubyFactor();
         let RubyEngine = RubyManager.getScriptEngine();
         RubyEngine.put("$getServer", server);

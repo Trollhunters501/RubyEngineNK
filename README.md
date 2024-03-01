@@ -1,9 +1,12 @@
 # RubyEngineNK
-RubyEngineNK
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 Run Ruby on Nukkit!
 Requirements:
-JSEngineNK Plugin: [](https://cloudburstmc.org/resources/jsenginenk.939/)
-RubyLib: [](https://github.com/Trollhunters501/RubyLib)
+JSEngineNK Plugin: https://cloudburstmc.org/resources/jsenginenk.939/
+RubyLib: https://github.com/Trollhunters501/RubyLib
 Know Basic JavaScript.
 
 Installation:
@@ -57,4 +60,4 @@ java_import "cn.nukkit.Server" # Can be used as in Java without specifying, just
 # more info: https://github.com/jruby/jruby/wiki/CallingJavaFromJRuby
 ```
 You can implement Listener events in Ruby (using Java headers and everything necessary to implement in Ruby with the engine)
-More Info: [](https://github.com/jruby/jruby/wiki)
+More Info: https://github.com/jruby/jruby/wiki

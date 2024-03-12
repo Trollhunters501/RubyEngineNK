@@ -53,11 +53,17 @@ var RubyEngineNK = Class(Object, {
                 return RubyFactor;
             },
             evalFile: function(fileA){
-              let FilesImport = new JavaImporter(java.io);
-              with(FilesImport){
-                let reader = new InputStreamReader(new FileInputStream(fileA));
-                RubyEngine.eval(reader);
+              if(!fileA instanceof java.io.File){
+                throw "The object is not a file!";
+                return;
               }
+              if(!fileA.exists()){
+                throw "The file does not exist!";
+                return;
+              }
+              let reader = new java.io.FileReader(fileA);
+              RubyEngine.eval(reader);
+              reader.close();
             }
         };
         return subclass;

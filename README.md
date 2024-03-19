@@ -4,55 +4,61 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 Run Ruby on Nukkit!
-Requirements:
+
+# Requirements:
 JSEngineNK Plugin: https://cloudburstmc.org/resources/jsenginenk.939/
+
 RubyLib: https://github.com/Trollhunters501/RubyLib
+
 Know Basic JavaScript.
 
-Installation:
+# Installation:
 Easily installed with a JSEngineNK script:
 ```js
 if(!script.getScriptByName("RubyEngineNK")){
    load("https://raw.githubusercontent.com/Trollhunters501/RubyEngineNK/main/src/Creadores/Program/RubyEngineNK.js");
 }
 ```
-Engine Creation:
+# Engine Creation:
 Just add this code to your script and you can use Ruby!
 ```js
 var TestRuby = new RubyEngineNK().build();
 ```
-Eval:
+# Eval:
 ```js
 TestRuby.eval("$getLogger.info('hello world!')");
 ```
-Default variables:
+# Default variables:
 $getLogger return logger by JSEngineNK
+
 $getServer return server
+
 $manager return manager by JSEngineNK
+
 $plugin return main Class by JSEngineNK
 
-Specify Variables (put):
+# Specify Variables (put):
 ```js
 TestRuby.put("localVariable", objectJava);//cannot be used in functions or classes only outside
 TestRuby.put("$globalVariable", objectJava);//Can be used everywhere
 TestRuby.put("CONSTVARIABLE", objectJava);//constant variable constant variable
 //also applies to setNnClassLoader!
 ```
-setNnClassLoader :
+# setNnClassLoader :
 This function does the same thing as JSEngineNK's Nnclassloader API but passed to Ruby example:
 ```js
 TestRuby.setNnClassLoader({ urls: ["https://test.com/test.jar"] }, {
   $global: "class.example"//...
 });
 ```
-It also has most of the features of PHPEngineNK (minus code conversion and print)
+It also has most of the features of [PHPEngineNK](https://cloudburstmc.org/resources/phpenginenk.968/) (minus code conversion and print)
 
-evalFile:
+# evalFile:
 Run Ruby code from a file:
 ```
 TestRuby.evalFile(manager.getFile("TestRuby", "Test.rb"));
 ```
-Java methods from Ruby:
+# Java methods from Ruby:
 ```ruby
 # Import as Java import
 require 'java' #import java

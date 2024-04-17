@@ -16,7 +16,7 @@ Know Basic JavaScript.
 Easily installed with a JSEngineNK script:
 ```js
 if(!script.getScriptByName("RubyEngineNK")){
-   load("https://raw.githubusercontent.com/Trollhunters501/RubyEngineNK/main/src/Creadores/Program/RubyEngineNK.js");
+   load("https://cdn.jsdelivr.net/gh/Trollhunters501/RubyEngineNK/src/Creadores/Program/RubyEngineNK.js");
 }
 ```
 # Engine Creation:

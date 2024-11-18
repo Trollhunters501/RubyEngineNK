@@ -7,22 +7,21 @@ Run Ruby on Nukkit!
 
 # Requirements:
 JSEngineNK Plugin: https://cloudburstmc.org/resources/jsenginenk.939/
-
-RubyLib: https://github.com/Trollhunters501/RubyLib
+And JSENK2: https://cloudburstmc.org/resources/jsenk2.1017/
 
 Know Basic JavaScript.
 
 # Installation:
-Easily installed with a JSEngineNK script:
+Just add it in dependencies of your JSENK2 script and put the file in the plugins/JSENK2 folder
+
+Example:
 ```js
-if(!script.getScriptByName("RubyEngineNK")){
-   load("https://cdn.jsdelivr.net/gh/Trollhunters501/RubyEngineNK/src/Creadores/Program/RubyEngineNK.js");
-}
+const RubyS = require("RubyEngineNK/org/CreadoresProgram/RubyEngineNK.js");
 ```
 # Engine Creation:
 Just add this code to your script and you can use Ruby!
 ```js
-var TestRuby = new RubyEngineNK().build();
+var TestRuby = new RubyS.RubyEngineNK().build();
 ```
 # Eval:
 ```js

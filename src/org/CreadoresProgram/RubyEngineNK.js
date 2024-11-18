@@ -1,14 +1,7 @@
-if(manager.getPlugin("RubyLib") != null){
-script.registerScript({
-    name: "RubyEngineNK",
-    version: "1.0",
-    description: "Run Ruby on Nukkit!",
-    website: "https://github.com/Trollhunters501/RubyEngineNK/",
-    author: "Creadores Program"
-});
-var RubyEngineNK = Class(Object, {
+const prefix = "[RubyEngineNK] ";
+const RubyEngineNK = Class(Object, {
     build: function(){
-        let libs = new NnClassLoader({ jars: [ manager.getPlugin("RubyLib").getClass().getProtectionDomain().getCodeSource().getLocation().getPath() ] });
+        let libs = new NnClassLoader({ maven: [ "org.jruby:jruby-complete:9.4.9.0" ] });
         let RubyFactor = libs.type("org.jruby.embed.jsr223.JRubyEngineFactory");
         let RubyManager = new RubyFactor();
         let RubyEngine = RubyManager.getScriptEngine();
@@ -81,7 +74,18 @@ var RubyEngineNK = Class(Object, {
       return "RubyEngineNK[]";
     }
 });
-}else{
-    console.critical("RubyLib Plugin not found! Download at https://github.com/Trollhunters501/RubyLib/releases/tag/9.4.6.0");
-    throw "Error Plugin RubyLib Not Found";
+function enable(){
+  console.info(prefix+"§aDone");
 }
+function load(){
+  console.info(prefix+"§eLoading...");
+}
+function disable(){
+  console.info(prefix+"§cBye");
+}
+module.exports = {
+  RubyEngineNK: RubyEngineNK,
+  onEnable: enable,
+  onLoad: load,
+  onDisable: disable
+};

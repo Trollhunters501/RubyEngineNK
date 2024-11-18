@@ -1,0 +1,8 @@
+{
+    "name": "RubyEngineNK",
+    "main": "org/CreadoresProgram/RubyEngineNK.js",
+    "description": "Run Ruby on Nukkit!",
+    "version": "1.1.0",
+    "author": "Creadores Program",
+    "homepage": "https://github.com/Trollhunters501/RubyEngineNK/"
+}
